@@ -15,8 +15,15 @@ tasks.withType(JavaCompile) {
     options.compilerArgs << "-parameters"
 }
 
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
 dependencies {
-    compile group: 'org.activiti', name: 'activiti-spring-boot-starter', version: '7.1.0.M6'
+    compile group: 'org.activiti', name: 'activiti-api-process-runtime-impl', version: '7.1.0.M6'
+    compile group: 'org.activiti', name: 'activiti-spring', version: '7.1.0.M6'
 
     annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.2'
