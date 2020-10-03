@@ -26,14 +26,14 @@ import static io.thesf.swiftframework.activiti.api.runtime.model.ExecutionVariab
 /**
  * Extension for {@link UserTaskActivityBehavior}.
  *
- * 1. Dynamic setting of approvers.
+ * 1. Dynamic setting of assignee.
  *
  * @see io.thesf.swiftframework.activiti.engine.impl.bpmn.parser.handler.PreUserTaskParseHandler
  * @author VirtualCry
  */
-public class EnhanceUserTaskActivityBehavior extends UserTaskActivityBehavior {
+public class InnerAssignUserTaskActivityBehavior extends UserTaskActivityBehavior {
 
-    public EnhanceUserTaskActivityBehavior(UserTask userTask) {
+    public InnerAssignUserTaskActivityBehavior(UserTask userTask) {
         super(userTask);
     }
 

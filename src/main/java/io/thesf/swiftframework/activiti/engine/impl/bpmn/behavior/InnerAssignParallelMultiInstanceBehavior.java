@@ -33,16 +33,16 @@ import static io.thesf.swiftframework.activiti.api.runtime.model.ExecutionVariab
  * Extension for {@link ParallelMultiInstanceBehavior}.
  *
  * 1. fix bug - The variable value type queried from the database is not {@link Collection} but {@link ArrayNode}.
- * 2. Dynamic setting of approvers.
+ * 2. Dynamic setting of assignee.
  *
  * @see io.thesf.swiftframework.activiti.engine.impl.bpmn.parser.handler.PreUserTaskParseHandler
  * @author VirtualCry
  */
-public class EnhanceParallelMultiInstanceBehavior extends ParallelMultiInstanceBehavior {
+public class InnerAssignParallelMultiInstanceBehavior extends ParallelMultiInstanceBehavior {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
 
-    public EnhanceParallelMultiInstanceBehavior(Activity activity, AbstractBpmnActivityBehavior originalActivityBehavior) {
+    public InnerAssignParallelMultiInstanceBehavior(Activity activity, AbstractBpmnActivityBehavior originalActivityBehavior) {
         super(activity, originalActivityBehavior);
     }
 
